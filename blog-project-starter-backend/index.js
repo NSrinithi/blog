@@ -27,7 +27,7 @@ const upload = multer({ storage: storage });
 
 
 // MongoDB Connection
-mongoose.connect('mongodb://localhost:27017/blogDB').then(() => {
+mongoose.connect(process.env.MONGODB_URI).then(() => {
   console.log("Connection Successfull")
 })
 
