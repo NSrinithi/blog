@@ -9,6 +9,7 @@ import BlogImage from "../assets/blogImage.png";
 
 import Footer from "./common/Footer";
 
+
 function Home() {
 
     const navigate = useNavigate();
@@ -23,47 +24,61 @@ function Home() {
             <section className="
                 max-w-6xl
                 mx-auto
-                px-6
+                px-5
+                sm:px-8
                 md:px-10
-                pt-16
+                pt-12
+                sm:pt-16
                 md:pt-24
-                pb-20
+                pb-16
+                sm:pb-20
+                md:pb-24
             ">
 
                 <div className="
                     grid
+                    grid-cols-1
                     md:grid-cols-2
                     gap-12
+                    sm:gap-14
+                    md:gap-16
                     items-center
                 ">
 
 
                     {/* TEXT */}
 
-                    <div>
+                    <div className="min-w-0">
 
                         <p className="
-                            text-sm
+                            text-[11px]
+                            sm:text-xs
+                            md:text-sm
                             uppercase
-                            tracking-[0.3em]
+                            tracking-[0.22em]
+                            sm:tracking-[0.3em]
                             text-[#477681]
                             font-semibold
-                            mb-6
+                            mb-4
+                            sm:mb-6
                         ">
                             Welcome to my little corner
                         </p>
 
 
                         <h1 className="
-                            text-5xl
-                            md:text-7xl
+                            text-[42px]
+                            leading-[1.02]
+                            sm:text-5xl
+                            md:text-6xl
+                            lg:text-7xl
                             font-bold
-                            leading-[1.05]
                             tracking-tight
                             text-[#17232A]
                         ">
 
                             Stories,
+
                             <br />
 
                             <span className="text-[#477681]">
@@ -75,6 +90,7 @@ function Home() {
                             <br />
 
                             everything
+
                             <br />
 
                             in between.
@@ -83,9 +99,12 @@ function Home() {
 
 
                         <p className="
-                            mt-7
-                            text-lg
-                            leading-8
+                            mt-5
+                            sm:mt-7
+                            text-base
+                            sm:text-lg
+                            leading-7
+                            sm:leading-8
                             text-[#66808A]
                             max-w-lg
                         ">
@@ -96,11 +115,17 @@ function Home() {
                         </p>
 
 
+                        {/* BUTTONS */}
+
                         <div className="
                             flex
+                            flex-col
+                            sm:flex-row
                             flex-wrap
-                            gap-4
-                            mt-8
+                            gap-3
+                            sm:gap-4
+                            mt-7
+                            sm:mt-8
                         ">
 
 
@@ -109,8 +134,12 @@ function Home() {
                             <button
                                 onClick={() => navigate("/blogs")}
                                 className="
-                                    px-7
-                                    py-3.5
+                                    w-full
+                                    sm:w-auto
+                                    px-6
+                                    sm:px-7
+                                    py-3
+                                    sm:py-3.5
                                     rounded-full
                                     bg-[#477681]
                                     text-white
@@ -130,8 +159,12 @@ function Home() {
                             <button
                                 onClick={() => navigate("/about")}
                                 className="
-                                    px-7
-                                    py-3.5
+                                    w-full
+                                    sm:w-auto
+                                    px-6
+                                    sm:px-7
+                                    py-3
+                                    sm:py-3.5
                                     rounded-full
                                     border
                                     border-[#17232A]
@@ -151,6 +184,7 @@ function Home() {
                     </div>
 
 
+
                     {/* IMAGE */}
 
                     <div className="
@@ -158,6 +192,11 @@ function Home() {
                         flex
                         justify-center
                         md:justify-end
+                        mt-4
+                        md:mt-0
+                        px-4
+                        sm:px-8
+                        md:px-0
                     ">
 
 
@@ -165,14 +204,22 @@ function Home() {
 
                         <div className="
                             absolute
-                            w-72
-                            h-72
-                            md:w-96
-                            md:h-96
+                            w-56
+                            h-56
+                            sm:w-72
+                            sm:h-72
+                            md:w-80
+                            md:h-80
+                            lg:w-96
+                            lg:h-96
                             rounded-full
                             bg-[#DCE7EA]
-                            -top-5
-                            -right-2
+                            -top-4
+                            sm:-top-5
+                            right-1/2
+                            translate-x-1/2
+                            md:right-0
+                            md:translate-x-0
                         ">
                         </div>
 
@@ -181,12 +228,17 @@ function Home() {
 
                         <div className="
                             absolute
-                            w-24
-                            h-24
+                            w-16
+                            h-16
+                            sm:w-20
+                            sm:h-20
+                            md:w-24
+                            md:h-24
                             rounded-full
                             bg-[#BFD3D8]
-                            bottom-2
-                            left-5
+                            bottom-0
+                            left-2
+                            sm:left-8
                             md:left-12
                         ">
                         </div>
@@ -198,9 +250,14 @@ function Home() {
                             className="
                                 relative
                                 z-10
-                                w-72
-                                md:w-96
-                                rounded-[2rem]
+                                w-full
+                                max-w-[280px]
+                                sm:max-w-[340px]
+                                md:max-w-[370px]
+                                lg:max-w-[390px]
+                                aspect-[4/5]
+                                rounded-[1.5rem]
+                                sm:rounded-[2rem]
                                 object-cover
                                 shadow-xl
                                 rotate-2
@@ -220,22 +277,30 @@ function Home() {
             <section className="
                 bg-[#17232A]
                 text-white
-                py-8
+                py-6
+                sm:py-7
+                md:py-8
             ">
 
                 <div className="
                     max-w-6xl
                     mx-auto
-                    px-6
+                    px-5
+                    sm:px-8
                     md:px-10
                     flex
                     flex-wrap
                     justify-center
                     md:justify-between
-                    gap-6
-                    text-sm
+                    gap-x-6
+                    gap-y-3
+                    sm:gap-y-4
+                    text-[10px]
+                    sm:text-xs
+                    md:text-sm
                     uppercase
-                    tracking-[0.2em]
+                    tracking-[0.15em]
+                    sm:tracking-[0.2em]
                 ">
 
                     <span>Technology</span>
@@ -255,28 +320,40 @@ function Home() {
             <section className="
                 max-w-6xl
                 mx-auto
-                px-6
+                px-5
+                sm:px-8
                 md:px-10
-                py-24
+                py-16
+                sm:py-20
+                md:py-24
             ">
 
                 <div className="
                     grid
+                    grid-cols-1
                     md:grid-cols-2
-                    gap-16
+                    gap-12
+                    sm:gap-14
+                    md:gap-16
                     items-center
                 ">
 
 
+                    {/* TEXT */}
+
                     <div className="order-2 md:order-1">
 
                         <p className="
-                            text-sm
+                            text-[11px]
+                            sm:text-xs
+                            md:text-sm
                             uppercase
-                            tracking-[0.25em]
+                            tracking-[0.2em]
+                            sm:tracking-[0.25em]
                             text-[#477681]
                             font-semibold
-                            mb-4
+                            mb-3
+                            sm:mb-4
                         ">
                             A little about this blog
                         </p>
@@ -284,16 +361,19 @@ function Home() {
 
                         <h2 className="
                             text-4xl
+                            sm:text-5xl
                             md:text-6xl
                             font-bold
-                            leading-tight
+                            leading-[1.05]
                             text-[#17232A]
                         ">
 
                             Learning,
+
                             <br />
 
                             building,
+
                             <br />
 
                             <span className="text-[#477681]">
@@ -304,10 +384,13 @@ function Home() {
 
 
                         <p className="
-                            mt-6
+                            mt-5
+                            sm:mt-6
                             text-[#66808A]
-                            text-lg
-                            leading-8
+                            text-base
+                            sm:text-lg
+                            leading-7
+                            sm:leading-8
                             max-w-xl
                         ">
                             This blog is where I document the things
@@ -321,7 +404,8 @@ function Home() {
                         <button
                             onClick={() => navigate("/about")}
                             className="
-                                mt-7
+                                mt-6
+                                sm:mt-7
                                 text-[#477681]
                                 font-semibold
                                 border-b-2
@@ -338,6 +422,9 @@ function Home() {
                     </div>
 
 
+
+                    {/* IMAGE */}
+
                     <div className="
                         order-1
                         md:order-2
@@ -349,9 +436,13 @@ function Home() {
                             src={BlogImage}
                             alt="Writing"
                             className="
-                                w-64
-                                md:w-80
-                                rounded-[2rem]
+                                w-56
+                                sm:w-64
+                                md:w-72
+                                lg:w-80
+                                max-w-full
+                                rounded-[1.5rem]
+                                sm:rounded-[2rem]
                                 shadow-lg
                                 -rotate-3
                             "
@@ -369,16 +460,21 @@ function Home() {
 
             <section className="
                 bg-[#EAF0F2]
-                py-20
+                py-16
+                sm:py-20
+                md:py-24
             ">
 
                 <div className="
                     max-w-6xl
                     mx-auto
-                    px-6
+                    px-5
+                    sm:px-8
                     md:px-10
                 ">
 
+
+                    {/* SECTION HEADER */}
 
                     <div className="
                         flex
@@ -387,25 +483,32 @@ function Home() {
                         md:items-end
                         justify-between
                         gap-5
-                        mb-12
+                        sm:gap-6
+                        mb-9
+                        sm:mb-12
                     ">
 
                         <div>
 
                             <p className="
-                                text-sm
+                                text-[11px]
+                                sm:text-xs
+                                md:text-sm
                                 uppercase
-                                tracking-[0.25em]
+                                tracking-[0.2em]
+                                sm:tracking-[0.25em]
                                 text-[#477681]
                                 font-semibold
-                                mb-3
+                                mb-2
+                                sm:mb-3
                             ">
                                 Things I've built
                             </p>
 
 
                             <h2 className="
-                                text-4xl
+                                text-3xl
+                                sm:text-4xl
                                 md:text-5xl
                                 font-bold
                                 text-[#17232A]
@@ -418,7 +521,10 @@ function Home() {
 
                         <p className="
                             text-[#66808A]
+                            text-sm
+                            sm:text-base
                             max-w-md
+                            leading-7
                         ">
                             A collection of projects I've worked on
                             while learning and experimenting with
@@ -429,10 +535,16 @@ function Home() {
 
 
 
+                    {/* PROJECT CARDS */}
+
                     <div className="
                         grid
+                        grid-cols-1
+                        sm:grid-cols-2
                         md:grid-cols-3
-                        gap-7
+                        gap-5
+                        sm:gap-6
+                        md:gap-7
                     ">
 
 
@@ -440,8 +552,10 @@ function Home() {
 
                         <div className="
                             bg-white
-                            p-4
-                            rounded-2xl
+                            p-3
+                            sm:p-4
+                            rounded-xl
+                            sm:rounded-2xl
                             hover:-translate-y-2
                             transition
                             duration-300
@@ -452,17 +566,20 @@ function Home() {
                                 alt="Project 1"
                                 className="
                                     w-full
-                                    h-52
+                                    h-48
+                                    sm:h-52
                                     object-cover
-                                    rounded-xl
+                                    rounded-lg
+                                    sm:rounded-xl
                                 "
                             />
 
 
-                            <div className="px-2 pt-5 pb-2">
+                            <div className="px-2 pt-4 sm:pt-5 pb-2">
 
                                 <p className="
-                                    text-xs
+                                    text-[10px]
+                                    sm:text-xs
                                     uppercase
                                     tracking-widest
                                     text-[#477681]
@@ -473,7 +590,8 @@ function Home() {
 
 
                                 <h3 className="
-                                    text-xl
+                                    text-lg
+                                    sm:text-xl
                                     font-bold
                                     mt-2
                                     text-[#17232A]
@@ -491,8 +609,10 @@ function Home() {
 
                         <div className="
                             bg-white
-                            p-4
-                            rounded-2xl
+                            p-3
+                            sm:p-4
+                            rounded-xl
+                            sm:rounded-2xl
                             hover:-translate-y-2
                             transition
                             duration-300
@@ -503,17 +623,20 @@ function Home() {
                                 alt="Project 2"
                                 className="
                                     w-full
-                                    h-52
+                                    h-48
+                                    sm:h-52
                                     object-cover
-                                    rounded-xl
+                                    rounded-lg
+                                    sm:rounded-xl
                                 "
                             />
 
 
-                            <div className="px-2 pt-5 pb-2">
+                            <div className="px-2 pt-4 sm:pt-5 pb-2">
 
                                 <p className="
-                                    text-xs
+                                    text-[10px]
+                                    sm:text-xs
                                     uppercase
                                     tracking-widest
                                     text-[#477681]
@@ -524,7 +647,8 @@ function Home() {
 
 
                                 <h3 className="
-                                    text-xl
+                                    text-lg
+                                    sm:text-xl
                                     font-bold
                                     mt-2
                                     text-[#17232A]
@@ -542,8 +666,10 @@ function Home() {
 
                         <div className="
                             bg-white
-                            p-4
-                            rounded-2xl
+                            p-3
+                            sm:p-4
+                            rounded-xl
+                            sm:rounded-2xl
                             hover:-translate-y-2
                             transition
                             duration-300
@@ -554,17 +680,20 @@ function Home() {
                                 alt="Project 3"
                                 className="
                                     w-full
-                                    h-52
+                                    h-48
+                                    sm:h-52
                                     object-cover
-                                    rounded-xl
+                                    rounded-lg
+                                    sm:rounded-xl
                                 "
                             />
 
 
-                            <div className="px-2 pt-5 pb-2">
+                            <div className="px-2 pt-4 sm:pt-5 pb-2">
 
                                 <p className="
-                                    text-xs
+                                    text-[10px]
+                                    sm:text-xs
                                     uppercase
                                     tracking-widest
                                     text-[#477681]
@@ -575,7 +704,8 @@ function Home() {
 
 
                                 <h3 className="
-                                    text-xl
+                                    text-lg
+                                    sm:text-xl
                                     font-bold
                                     mt-2
                                     text-[#17232A]
@@ -586,6 +716,7 @@ function Home() {
                             </div>
 
                         </div>
+
 
                     </div>
 
@@ -600,17 +731,24 @@ function Home() {
             <section className="
                 max-w-6xl
                 mx-auto
-                px-6
+                px-5
+                sm:px-8
                 md:px-10
-                py-24
+                py-16
+                sm:py-20
+                md:py-24
             ">
 
                 <div className="
                     bg-[#477681]
-                    rounded-[2rem]
-                    px-8
+                    rounded-[1.5rem]
+                    sm:rounded-[2rem]
+                    px-6
+                    sm:px-10
                     md:px-16
-                    py-14
+                    py-10
+                    sm:py-12
+                    md:py-14
                     text-white
                     relative
                     overflow-hidden
@@ -621,24 +759,36 @@ function Home() {
 
                     <div className="
                         absolute
-                        w-52
-                        h-52
+                        w-36
+                        h-36
+                        sm:w-44
+                        sm:h-44
+                        md:w-52
+                        md:h-52
                         rounded-full
                         bg-[#5D8790]
-                        -right-16
-                        -top-16
+                        -right-12
+                        sm:-right-16
+                        -top-12
+                        sm:-top-16
                     ">
                     </div>
 
 
                     <div className="
                         absolute
-                        w-28
-                        h-28
+                        w-20
+                        h-20
+                        sm:w-24
+                        sm:h-24
+                        md:w-28
+                        md:h-28
                         rounded-full
                         bg-[#BFD3D8]
-                        right-28
-                        -bottom-12
+                        right-16
+                        sm:right-24
+                        -bottom-8
+                        sm:-bottom-12
                     ">
                     </div>
 
@@ -646,9 +796,12 @@ function Home() {
                     <div className="relative z-10">
 
                         <p className="
-                            text-sm
+                            text-[10px]
+                            sm:text-xs
+                            md:text-sm
                             uppercase
-                            tracking-[0.25em]
+                            tracking-[0.2em]
+                            sm:tracking-[0.25em]
                             text-[#DCE7EA]
                             font-semibold
                         ">
@@ -657,21 +810,26 @@ function Home() {
 
 
                         <h2 className="
-                            text-4xl
-                            md:text-6xl
+                            text-3xl
+                            sm:text-4xl
+                            md:text-5xl
+                            lg:text-6xl
                             font-bold
-                            mt-4
+                            mt-3
+                            sm:mt-4
                             max-w-2xl
+                            leading-tight
                         ">
-                            Curious about what
-                            I'm learning?
+                            Curious about what I'm learning?
                         </h2>
 
 
                         <p className="
-                            mt-5
+                            mt-4
+                            sm:mt-5
                             text-[#EAF0F2]
-                            text-lg
+                            text-base
+                            sm:text-lg
                             max-w-xl
                             leading-7
                         ">
@@ -684,9 +842,14 @@ function Home() {
                         <button
                             onClick={() => navigate("/blogs")}
                             className="
-                                mt-8
-                                px-7
-                                py-3.5
+                                mt-6
+                                sm:mt-8
+                                w-full
+                                sm:w-auto
+                                px-6
+                                sm:px-7
+                                py-3
+                                sm:py-3.5
                                 rounded-full
                                 bg-white
                                 text-[#477681]
@@ -711,7 +874,9 @@ function Home() {
             <Footer />
 
         </div>
+
     );
 }
+
 
 export default Home;
