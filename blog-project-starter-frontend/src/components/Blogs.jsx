@@ -25,7 +25,7 @@ function Blogs() {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (
                 user &&
-                user.uid === import.meta.env.VITE_ADMIN_CODE
+                user.uid === "RDXDC00vJybJqXsUOQlERDPhPTL2"
             ) {
                 setAdmin(true);
             } else {
