@@ -15,7 +15,7 @@ function Login() {
             }
         })
         window.scrollTo(0, 0);
-    }, []);
+    }, [navigate]);
 
     async function handleGoogleSignup() {
         try {
