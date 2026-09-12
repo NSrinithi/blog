@@ -42,7 +42,7 @@ function AdminDashBoard() {
         try {
 
             const response = await axios.get(
-                "http://localhost:5000/api/blogs"
+                "https://blog-1lys.onrender.com/api/blogs"
             );
 
             const data = response.data;

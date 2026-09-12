@@ -25,7 +25,7 @@ function Blogs() {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (
                 user &&
-                user.uid === "RDXDC00vJybJqXsUOQlERDPhPTL2"
+                user.uid === import.meta.env.ADMIN_CODE
             ) {
                 setAdmin(true);
             } else {
@@ -39,7 +39,7 @@ function Blogs() {
     async function getBlogs() {
         try {
             const response = await axios.get(
-                "http://localhost:5000/api/blogs"
+                "https://blog-1lys.onrender.com/api/blogs"
             );
 
             setBlogs(response.data);
@@ -51,7 +51,7 @@ function Blogs() {
     const handleLike = async (blogId) => {
         try {
             const response = await axios.patch(
-                `http://localhost:5000/api/blogs/like/${blogId}`
+                `https://blog-1lys.onrender.com/api/blogs/like/${blogId}`
             );
 
             if (response.status === 200) {
@@ -80,7 +80,7 @@ function Blogs() {
 
         try {
             const response = await axios.delete(
-                `http://localhost:5000/api/blogs/delete/${id}`
+                `https://blog-1lys.onrender.com/api/blogs/delete/${id}`
             );
 
             if (response.status === 200) {
@@ -114,7 +114,7 @@ function Blogs() {
     async function handleEdit(id) {
         try {
             const response = await axios.get(
-                `http://localhost:5000/api/blogs/${id}`
+                `https://blog-1lys.onrender.com/api/blogs/${id}`
             );
 
             setEdit(true);
@@ -167,7 +167,7 @@ function Blogs() {
 
         try {
             const response = await axios.post(
-                "http://localhost:5000/api/blogs",
+                "https://blog-1lys.onrender.com/api/blogs",
                 formData
             );
 
@@ -209,7 +209,7 @@ function Blogs() {
 
         try {
             const response = await axios.put(
-                `http://localhost:5000/api/blogs/update/${editid}`,
+                `https://blog-1lys.onrender.com/api/blogs/update/${editid}`,
                 formData
             );
 
