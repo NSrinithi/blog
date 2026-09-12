@@ -9,7 +9,7 @@ import UserDashBoard from "./components/UserDashBoard";
 import About from "./components/About";
 function App() {
   return (
-   <div className="px-10  bg-white border rounded-md">
+   <div>
     <BrowserRouter>
     <Navbar/>
     <Routes>
